@@ -1,3 +1,7 @@
+body {
+  background-color: #f5f6fa;
+}
+
 .App {
   text-align: center;
 }
@@ -36,4 +40,92 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.naviagation {
+  display: flex;
+  width: 100%;
+  gap: 30px;
+  padding: 20px;
+  background-color: #fff;
+  margin-top: 20px;
+  border-bottom: 1px solid #e8e8e8;
+  align-items: center;
+}
+
+.naviagation h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0290ff;
+}
+
+.nav-links {
+  display: flex;
+  flex-grow: 1;
+  list-style-type: none;
+  grid-gap: 40px;
+  gap: 40px;
+}
+
+.home-link,
+.categories-link {
+  opacity: 1;
+  color: #121212;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1.9px;
+  text-decoration: none;
+}
+
+.home-link:hover,
+.categories-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #0290ff;
+}
+
+.form-sec {
+  display: block;
+}
+
+.form {
+  margin-top: 20px;
+  display: flex;
+  grid-gap: 32px;
+  gap: 32px;
+}
+
+.title-input {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  background-color: #fff;
+  font-size: 1rem;
+  letter-spacing: -0.15px;
+  color: #121212;
+}
+
+.submit-btn button {
+  cursor: pointer;
+  width: 100px;
+  padding: 12px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  letter-spacing: 0.5px;
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 700;
+  font-family: "Roboto Slab", serif;
+}
+
+.the-book {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.the-book button {
+  width: fit-content;
 }
