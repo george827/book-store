@@ -1,7 +1,7 @@
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
-import Books from './components/Books';
-import Categories from './components/Categories';
+import Books from './pages/Books';
+import Categories from './pages/Categories';
 
 function App() {
   return (
