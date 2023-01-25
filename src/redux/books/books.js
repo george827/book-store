@@ -21,8 +21,8 @@ const initialState = [
   },
   {
     id: uuidv4(),
-    title: 'Harry Potter',
-    author: 'J. K. Rowling',
+    title: 'Adventures of Tom',
+    author: 'Sawyer: Mark Twain',
   },
 ];
 
