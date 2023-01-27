@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/books';
 
+const createBook = (title, author) => (
+  {
+    item_id: uuidv4(),
+    title,
+    author,
+    category: 'Action',
+  }
+);
+
 const CreateNewBook = () => {
-  const [title, Title] = useState('');
-  const [author, Author] = useState('');
+  const titleValue = useRef();
+  const authorValue = useRef();
   const dispatch = useDispatch();
 
   const addHandler = (e) => {
     e.preventDefault();
-    const book = {
-      id: uuidv4(),
-      title,
-      author,
-    };
+    const title = titleValue.current.value;
+    const author = authorValue.current.value;
 
     if (title !== '' && author !== '') {
-      dispatch(addBook(book));
-      Title('');
-      Author('');
+      dispatch(addBook(createBook(title, author)));
+      titleValue.current.value = '';
+      authorValue.current.value = '';
     }
   };
 
@@ -31,8 +37,7 @@ const CreateNewBook = () => {
             type="text"
             id="title"
             name="title"
-            value={title}
-            onChange={(e) => Title(e.target.value)}
+            ref={titleValue}
             className="title-input"
             placeholder="Book Title"
             required
@@ -41,8 +46,7 @@ const CreateNewBook = () => {
             type="text"
             id="title"
             name="author"
-            value={author}
-            onChange={(e) => Author(e.target.value)}
+            ref={authorValue}
             className="title-input"
             placeholder="Book Author"
             required
