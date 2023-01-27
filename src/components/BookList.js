@@ -20,9 +20,11 @@ const Booklist = () => {
             id={book.item_id}
             author={book.author}
             title={book.title}
+            categorie={book.category}
           />
         ))}
       </ul>
+      <div className="horizontal-divider" />
       <div className="form-sec">
         <h2>Add New Book</h2>
         <CreateNewBook />
