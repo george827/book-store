@@ -6,21 +6,23 @@ import Categories from './pages/Categories';
 function App() {
   return (
     <>
-      <nav className="naviagation">
-        <h1>Bookstore CMS</h1>
-        <ul className="nav-links">
-          <li>
-            <Link className="home-link" to="/">Books</Link>
-          </li>
-          <li>
-            <Link className="categories-link" to="/categories">Categories</Link>
-          </li>
-        </ul>
-      </nav>
-      <Routes>
-        <Route path="/" element={<Books />} />
-        <Route path="/categories" element={<Categories />} />
-      </Routes>
+      <div className="mainContainer">
+        <nav className="naviagation">
+          <h1>Bookstore CMS</h1>
+          <ul className="nav-links">
+            <li>
+              <Link className="home-link" to="/">Books</Link>
+            </li>
+            <li>
+              <Link className="categories-link" to="/categories">Categories</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/" element={<Books />} />
+          <Route path="/categories" element={<Categories />} />
+        </Routes>
+      </div>
     </>
   );
 }
